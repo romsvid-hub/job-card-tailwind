@@ -5,3 +5,5 @@
 Оригінал: Figma-фрейм "Job card" з проєкту ATJ Audit.
 
 Відкрити `index.html` у браузері — стилі підʼєднані через Tailwind CDN, нічого встановлювати не треба.
+
+Live preview для візуального огляду (Tailwind Play): https://play.tailwindcss.com/zCIuqqyND3
