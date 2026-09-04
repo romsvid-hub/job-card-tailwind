@@ -38,6 +38,9 @@
     body { font-family: "Fixel Text", system-ui, sans-serif; }
     .jc-icon { width: 24px; height: 24px; flex-shrink: 0; }
     .jc-icon-xs { width: 16px; height: 16px; display: inline-block; vertical-align: -3px; flex-shrink: 0; }
+    /* Time/currency labels use "Fixel Display" in Figma, not "Fixel Text" —
+       no Fixel Display files available yet, falls back to Fixel Text. */
+    .jc-display-font { font-family: "Fixel Display", "Fixel Text", system-ui, sans-serif; }
   </style>
 </head>
 <body>
@@ -59,7 +62,7 @@
       <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
         <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-4">
           <h2 class="text-xl sm:text-2xl font-semibold text-[#0f1828]">Менеджер з продажу Call tracking (B2B)</h2>
-          <span class="text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
+          <span class="jc-display-font font-medium text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
         </div>
         <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
           <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/briefcase.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Akvarel</span></div>
@@ -76,7 +79,7 @@
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div class="flex items-baseline gap-2">
             <span class="text-xl sm:text-2xl text-[#0f1828]">24 000 - 32 000</span>
-            <span class="text-base sm:text-lg text-[#676d77]">грн</span>
+            <span class="jc-display-font font-medium text-xl sm:text-2xl text-[#676d77]">грн</span>
           </div>
           <div class="flex items-center gap-3">
             <button class="size-8 flex items-center justify-center hover:opacity-70 shrink-0"><img class="jc-icon" src="assets/icons/heart.svg" alt="Зберегти" /></button>
@@ -91,7 +94,7 @@
       <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-4">
           <h2 class="text-xl sm:text-2xl font-semibold text-[#0f1828]">Менеджер з продажу Call tracking (B2B)</h2>
-          <span class="text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
+          <span class="jc-display-font font-medium text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
           <span class="bg-[#fceab9] text-[#974632] rounded-lg pl-2 pr-3 h-8 flex items-center gap-1 text-sm sm:text-base font-medium w-fit">На розгляді <img class="jc-icon-xs" src="assets/icons/help-circle-amber.svg" alt="" /></span>
         </div>
         <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
@@ -109,7 +112,7 @@
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div class="flex items-baseline gap-2">
             <span class="text-xl sm:text-2xl text-[#0f1828]">24 000 - 32 000</span>
-            <span class="text-base sm:text-lg text-[#676d77]">грн</span>
+            <span class="jc-display-font font-medium text-xl sm:text-2xl text-[#676d77]">грн</span>
           </div>
           <div class="flex items-center gap-3">
             <button class="border border-[#0f1828] rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-[#0f1828] hover:bg-gray-900 hover:text-white transition-all">Детальніше</button>
@@ -124,7 +127,7 @@
       <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
         <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-4">
           <h2 class="text-xl sm:text-2xl font-semibold text-[#0f1828]">Менеджер з продажу Call tracking (B2B)</h2>
-          <span class="text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
+          <span class="jc-display-font font-medium text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
         </div>
         <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
           <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/briefcase.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Akvarel</span></div>
@@ -141,7 +144,7 @@
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div class="flex items-baseline gap-2">
             <span class="text-xl sm:text-2xl text-[#0f1828]">24 000 - 32 000</span>
-            <span class="text-base sm:text-lg text-[#676d77]">грн</span>
+            <span class="jc-display-font font-medium text-xl sm:text-2xl text-[#676d77]">грн</span>
           </div>
           <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-end">
             <button class="border border-[#0f1828] rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-[#0f1828] hover:bg-gray-900 hover:text-white transition-all">Детальніше</button>
@@ -157,7 +160,7 @@
       <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
         <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-4">
           <h2 class="text-xl sm:text-2xl font-semibold text-[#0f1828]">Менеджер з продажу Call tracking (B2B)</h2>
-          <span class="text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
+          <span class="jc-display-font font-medium text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
         </div>
         <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
           <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/briefcase.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Akvarel</span></div>
@@ -174,7 +177,7 @@
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div class="flex items-baseline gap-2">
             <span class="text-xl sm:text-2xl text-[#0f1828]">24 000 - 32 000</span>
-            <span class="text-base sm:text-lg text-[#676d77]">грн</span>
+            <span class="jc-display-font font-medium text-xl sm:text-2xl text-[#676d77]">грн</span>
           </div>
           <div class="flex items-center gap-3">
             <button class="size-8 flex items-center justify-center hover:opacity-70 shrink-0"><img class="jc-icon" src="assets/icons/heart.svg" alt="Зберегти" /></button>
@@ -189,7 +192,7 @@
       <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
         <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-4">
           <h2 class="text-xl sm:text-2xl font-semibold text-[#0f1828]">Менеджер з продажу Call tracking (B2B)</h2>
-          <span class="text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
+          <span class="jc-display-font font-medium text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
         </div>
         <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
           <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/briefcase.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Akvarel</span></div>
@@ -206,7 +209,7 @@
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div class="flex items-baseline gap-2">
             <span class="text-xl sm:text-2xl text-[#0f1828]">24 000 - 32 000</span>
-            <span class="text-base sm:text-lg text-[#676d77]">грн</span>
+            <span class="jc-display-font font-medium text-xl sm:text-2xl text-[#676d77]">грн</span>
           </div>
           <div class="flex items-center gap-3">
             <button class="size-8 flex items-center justify-center hover:opacity-70 shrink-0"><img class="jc-icon" src="assets/icons/heart.svg" alt="Зберегти" /></button>
@@ -244,7 +247,7 @@
             <span class="text-xl sm:text-2xl text-[#9599a0]">24 000 - 32 000</span>
             <span class="text-base sm:text-lg text-[#9599a0]">грн</span>
           </div>
-          <button class="border border-[#e12d2d] rounded-lg pl-5 pr-6 py-3 text-base sm:text-lg font-medium text-[#e12d2d] hover:bg-red-50 transition-all"><img class="jc-icon-xs" src="assets/icons/trash.svg" alt="" /> Вилучити</button>
+          <button class="border border-[#e12d2d] rounded-lg pl-5 pr-6 py-3 flex items-center gap-2 text-base sm:text-lg font-medium text-[#e12d2d] hover:bg-red-50 transition-all"><img class="jc-icon" src="assets/icons/trash.svg" alt="" /> Вилучити</button>
         </div>
       </article>
     </section>
@@ -254,7 +257,7 @@
       <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
         <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-4">
           <h2 class="text-xl sm:text-2xl font-semibold text-[#0f1828]">Менеджер з продажу Call tracking (B2B)</h2>
-          <span class="text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
+          <span class="jc-display-font font-medium text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
         </div>
         <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
           <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/briefcase.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Akvarel</span></div>
@@ -271,12 +274,12 @@
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div class="flex items-baseline gap-2">
             <span class="text-xl sm:text-2xl text-[#0f1828]">24 000 - 32 000</span>
-            <span class="text-base sm:text-lg text-[#676d77]">грн</span>
+            <span class="jc-display-font font-medium text-xl sm:text-2xl text-[#676d77]">грн</span>
           </div>
           <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-end">
             <button class="border border-[#0f1828] rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-[#0f1828] hover:bg-gray-900 hover:text-white transition-all">Детальніше</button>
             <button class="rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-white bg-[#c94b2c] hover:opacity-90 transition-all">Відгукнутись</button>
-            <button class="border border-[#e12d2d] rounded-lg pl-5 pr-6 py-3 text-base sm:text-lg font-medium text-[#e12d2d] hover:bg-red-50 transition-all"><img class="jc-icon-xs" src="assets/icons/trash.svg" alt="" /> Вилучити</button>
+            <button class="border border-[#e12d2d] rounded-lg pl-5 pr-6 py-3 flex items-center gap-2 text-base sm:text-lg font-medium text-[#e12d2d] hover:bg-red-50 transition-all"><img class="jc-icon" src="assets/icons/trash.svg" alt="" /> Вилучити</button>
           </div>
         </div>
       </article>
