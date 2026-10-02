@@ -6,12 +6,12 @@
 
 Відкрити `index.html` у браузері — стилі підʼєднані через Tailwind CDN, нічого встановлювати не треба.
 
-## Гілка `all-states`
+## Усі 7 станів
 
-Розширена версія з усіма 7 станами компонента з Figma, а не лише одним:
-Default, Сonsideration, Suggestion, Unlogged, Unlogged (expanded),
-Unavailable, Saved. Кожен стан має власну логіку (бейджі, набір кнопок,
-сіре/кольорове оформлення), звірену напряму з Figma-специфікацією
-кожного варіанту.
+Розширено з одного стану до повного набору з Figma: Default, Сonsideration,
+Suggestion, Unlogged, Unlogged (expanded), Unavailable, Saved. Кожен стан має
+власну логіку (бейджі, набір кнопок, сіре/кольорове оформлення), звірену
+напряму з Figma-специфікацією кожного варіанту.
 
-Live preview для візуального огляду (Tailwind Play): https://play.tailwindcss.com/zCIuqqyND3
+- Live preview (GitHub Pages): https://romsvid-hub.github.io/job-card-tailwind/
+- Live preview (Tailwind Play): https://play.tailwindcss.com/G3KfzqOHmz
