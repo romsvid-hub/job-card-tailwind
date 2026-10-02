@@ -3,56 +3,289 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Job Card · Tailwind</title>
+  <title>Job Card · Tailwind — усі стани</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Real component typeface (Figma 761:17614 uses Fixel Text throughout). */
+    @font-face {
+      font-family: "Fixel Text";
+      src: url("assets/fonts/FixelText-Regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Fixel Text";
+      src: url("assets/fonts/FixelText-Medium.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Fixel Text";
+      src: url("assets/fonts/FixelText-SemiBold.woff2") format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Fixel Text";
+      src: url("assets/fonts/FixelText-Bold.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    body { font-family: "Fixel Text", system-ui, sans-serif; }
+    .jc-icon { width: 24px; height: 24px; flex-shrink: 0; }
+    .jc-icon-xs { width: 16px; height: 16px; display: inline-block; vertical-align: -3px; flex-shrink: 0; }
+    /* Time/currency labels use "Fixel Display" in Figma, not "Fixel Text" —
+       no Fixel Display files available yet, falls back to Fixel Text. */
+    .jc-display-font { font-family: "Fixel Display", "Fixel Text", system-ui, sans-serif; }
+  </style>
 </head>
 <body>
 
-<div class="min-h-screen bg-gray-50 flex items-center justify-center p-4 sm:p-8">
+<div class="min-h-screen bg-gray-50 p-4 sm:p-8">
+  <div class="max-w-[920px] mx-auto flex flex-col gap-10">
 
-  <article class="bg-white rounded-2xl shadow-sm p-4 sm:p-8 flex flex-col gap-4 w-full max-w-3xl">
+    <header class="flex flex-col gap-1">
+      <h1 class="text-2xl font-semibold text-[#0f1828]">Job Card — усі стани</h1>
+      <p class="text-gray-500">
+        Розширено з одного стану (домашнє завдання, лекція 3) до повного набору
+        з Figma: Default, Сonsideration, Suggestion, Unlogged, Unlogged (expanded),
+        Unavailable, Saved.
+      </p>
+    </header>
 
-    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-4">
-      <h2 class="text-xl sm:text-2xl font-semibold text-gray-900">Менеджер з продажу Call tracking (B2B)</h2>
-      <span class="text-sm sm:text-lg text-gray-500 whitespace-nowrap">15 годин тому</span>
-    </div>
+    <section class="flex flex-col gap-2">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Default</p>
+      <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-4">
+          <h2 class="text-xl sm:text-2xl font-semibold text-[#0f1828]">Менеджер з продажу Call tracking (B2B)</h2>
+          <span class="jc-display-font font-medium text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
+          <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/briefcase.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Akvarel</span></div>
+          <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/map-pin.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Львів</span></div>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="bg-[#eafbee] text-[#1a8234] rounded-full px-3 h-7 sm:h-8 flex items-center gap-1 text-sm sm:text-base font-medium"><img class="jc-icon-xs" src="assets/icons/check.svg" alt="" /> Наявність пандуса</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">З генератором</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">Психологічна підтримка</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">З укриттям</span>
+          <span class="border border-[#ebeced] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">+5</span>
+        </div>
+        <hr class="border-[#ebeced]" />
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-baseline gap-2">
+            <span class="text-xl sm:text-2xl text-[#0f1828]">24 000 - 32 000</span>
+            <span class="jc-display-font font-medium text-xl sm:text-2xl text-[#676d77]">грн</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <button class="size-8 flex items-center justify-center hover:opacity-70 shrink-0"><img class="jc-icon" src="assets/icons/heart.svg" alt="Зберегти" /></button>
+            <button class="flex-1 sm:flex-none border border-[#0f1828] rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-[#0f1828] hover:bg-gray-900 hover:text-white transition-all">Детальніше</button>
+          </div>
+        </div>
+      </article>
+    </section>
 
-    <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
-      <div class="flex items-center gap-2">
-        <span>💼</span>
-        <span class="text-base sm:text-lg text-gray-900">Akvarel</span>
-      </div>
-      <div class="flex items-center gap-2">
-        <span>📍</span>
-        <span class="text-base sm:text-lg text-gray-900">Львів</span>
-      </div>
-    </div>
+    <section class="flex flex-col gap-2">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Сonsideration</p>
+      <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-4">
+          <h2 class="text-xl sm:text-2xl font-semibold text-[#0f1828]">Менеджер з продажу Call tracking (B2B)</h2>
+          <span class="jc-display-font font-medium text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
+          <span class="bg-[#fceab9] text-[#974632] rounded-lg pl-2 pr-3 h-8 flex items-center gap-1 text-sm sm:text-base font-medium w-fit">На розгляді <img class="jc-icon-xs" src="assets/icons/help-circle-amber.svg" alt="" /></span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
+          <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/briefcase.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Akvarel</span></div>
+          <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/map-pin.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Львів</span></div>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="bg-[#eafbee] text-[#1a8234] rounded-full px-3 h-7 sm:h-8 flex items-center gap-1 text-sm sm:text-base font-medium"><img class="jc-icon-xs" src="assets/icons/check.svg" alt="" /> Наявність пандуса</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">З генератором</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">Психологічна підтримка</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">З укриттям</span>
+          <span class="border border-[#ebeced] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">+5</span>
+        </div>
+        <hr class="border-[#ebeced]" />
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-baseline gap-2">
+            <span class="text-xl sm:text-2xl text-[#0f1828]">24 000 - 32 000</span>
+            <span class="jc-display-font font-medium text-xl sm:text-2xl text-[#676d77]">грн</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <button class="border border-[#0f1828] rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-[#0f1828] hover:bg-gray-900 hover:text-white transition-all">Детальніше</button>
+            <button class="flex-1 sm:flex-none border border-[#0f1828] rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-[#0f1828] hover:bg-gray-900 hover:text-white transition-all">Відкликати</button>
+          </div>
+        </div>
+      </article>
+    </section>
 
-    <div class="flex items-center gap-2 flex-wrap">
-      <span class="bg-gray-100 rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base text-gray-900">Наявність пандуса</span>
-      <span class="bg-gray-100 rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base text-gray-900">З генератором</span>
-      <span class="bg-gray-100 rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base text-gray-900">Психологічна підтримка</span>
-      <span class="bg-gray-100 rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base text-gray-900">З укриттям</span>
-      <span class="border border-gray-200 rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base text-gray-900">+5</span>
-    </div>
+    <section class="flex flex-col gap-2">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Suggestion</p>
+      <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-4">
+          <h2 class="text-xl sm:text-2xl font-semibold text-[#0f1828]">Менеджер з продажу Call tracking (B2B)</h2>
+          <span class="jc-display-font font-medium text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
+          <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/briefcase.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Akvarel</span></div>
+          <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/map-pin.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Львів</span></div>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="bg-[#eafbee] text-[#1a8234] rounded-full px-3 h-7 sm:h-8 flex items-center gap-1 text-sm sm:text-base font-medium"><img class="jc-icon-xs" src="assets/icons/check.svg" alt="" /> Наявність пандуса</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">З генератором</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">Психологічна підтримка</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">З укриттям</span>
+          <span class="border border-[#ebeced] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">+5</span>
+        </div>
+        <hr class="border-[#ebeced]" />
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-baseline gap-2">
+            <span class="text-xl sm:text-2xl text-[#0f1828]">24 000 - 32 000</span>
+            <span class="jc-display-font font-medium text-xl sm:text-2xl text-[#676d77]">грн</span>
+          </div>
+          <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-end">
+            <button class="border border-[#0f1828] rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-[#0f1828] hover:bg-gray-900 hover:text-white transition-all">Детальніше</button>
+            <button class="border border-[#0f1828] rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-[#0f1828] hover:bg-gray-900 hover:text-white transition-all">Не зацікавлений</button>
+            <button class="rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-white bg-[#c94b2c] hover:opacity-90 transition-all">Зацікавлений</button>
+          </div>
+        </div>
+      </article>
+    </section>
 
-    <hr class="border-gray-200" />
+    <section class="flex flex-col gap-2">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Unlogged</p>
+      <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-4">
+          <h2 class="text-xl sm:text-2xl font-semibold text-[#0f1828]">Менеджер з продажу Call tracking (B2B)</h2>
+          <span class="jc-display-font font-medium text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
+          <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/briefcase.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Akvarel</span></div>
+          <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/map-pin.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Львів</span></div>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">Наявність пандуса</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">З генератором</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">Психологічна підтримка</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">З укриттям</span>
+          <span class="border border-[#ebeced] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">+5</span>
+        </div>
+        <hr class="border-[#ebeced]" />
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-baseline gap-2">
+            <span class="text-xl sm:text-2xl text-[#0f1828]">24 000 - 32 000</span>
+            <span class="jc-display-font font-medium text-xl sm:text-2xl text-[#676d77]">грн</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <button class="size-8 flex items-center justify-center hover:opacity-70 shrink-0"><img class="jc-icon" src="assets/icons/heart.svg" alt="Зберегти" /></button>
+            <button class="flex-1 sm:flex-none border border-[#0f1828] rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-[#0f1828] hover:bg-gray-900 hover:text-white transition-all">Детальніше</button>
+          </div>
+        </div>
+      </article>
+    </section>
 
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-      <div class="flex items-baseline gap-2">
-        <span class="text-xl sm:text-2xl text-gray-900">24 000 - 32 000</span>
-        <span class="text-base sm:text-lg text-gray-500">грн</span>
-      </div>
-      <div class="flex items-center gap-3">
-        <button class="size-8 flex items-center justify-center text-xl text-gray-400 hover:text-gray-600 shrink-0">♡</button>
-        <button class="flex-1 sm:flex-none border border-gray-900 rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-gray-900 hover:bg-gray-900 hover:text-white transition-all">
-          Детальніше
-        </button>
-      </div>
-    </div>
+    <section class="flex flex-col gap-2">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Unlogged (expanded)</p>
+      <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-4">
+          <h2 class="text-xl sm:text-2xl font-semibold text-[#0f1828]">Менеджер з продажу Call tracking (B2B)</h2>
+          <span class="jc-display-font font-medium text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
+          <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/briefcase.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Akvarel</span></div>
+          <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/map-pin.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Львів</span></div>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">Наявність пандуса</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">З генератором</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">Психологічна підтримка</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">З укриттям</span>
+          <span class="border border-[#ebeced] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">+5</span>
+        </div>
+        <hr class="border-[#ebeced]" />
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-baseline gap-2">
+            <span class="text-xl sm:text-2xl text-[#0f1828]">24 000 - 32 000</span>
+            <span class="jc-display-font font-medium text-xl sm:text-2xl text-[#676d77]">грн</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <button class="size-8 flex items-center justify-center hover:opacity-70 shrink-0"><img class="jc-icon" src="assets/icons/heart.svg" alt="Зберегти" /></button>
+            <button class="flex-1 sm:flex-none border border-[#0f1828] rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-[#0f1828] hover:bg-gray-900 hover:text-white transition-all">Детальніше</button>
+          </div>
+        </div>
+        <div class="bg-[#f5f5f6] rounded-lg pl-5 pr-8 py-2 text-sm sm:text-base text-[#0f1828]">
+          Щоб зберегти вакансію, <a href="#" class="font-medium underline text-[#c94b2c]">увійдіть</a> або <a href="#" class="font-medium underline text-[#c94b2c]">створіть профіль</a>.
+        </div>
+      </article>
+    </section>
 
-  </article>
+    <section class="flex flex-col gap-2">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Unavailable</p>
+      <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-4">
+          <h2 class="text-xl sm:text-2xl font-semibold text-[#9599a0]">Менеджер з продажу Call tracking (B2B)</h2>
+          <span class="text-sm sm:text-lg text-[#9599a0] whitespace-nowrap">15 годин тому</span>
+          <span class="bg-[#fceaea] text-[#891b1b] rounded-lg pl-2 pr-3 h-8 flex items-center gap-1 text-sm sm:text-base font-medium w-fit">Вакансія закрита <img class="jc-icon-xs" src="assets/icons/help-circle-red.svg" alt="" /></span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
+          <div class="flex items-center gap-2"><img class="jc-icon opacity-40" src="assets/icons/briefcase.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#9599a0]">Akvarel</span></div>
+          <div class="flex items-center gap-2"><img class="jc-icon opacity-40" src="assets/icons/map-pin.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#9599a0]">Львів</span></div>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="bg-gray-50 rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base text-gray-300">Наявність пандуса</span>
+          <span class="bg-gray-50 rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base text-gray-300">З генератором</span>
+          <span class="bg-gray-50 rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base text-gray-300">Психологічна підтримка</span>
+          <span class="bg-gray-50 rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base text-gray-300">З укриттям</span>
+          <span class="border border-gray-100 rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base text-gray-300">+5</span>
+        </div>
+        <hr class="border-[#ebeced]" />
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-baseline gap-2">
+            <span class="text-xl sm:text-2xl text-[#9599a0]">24 000 - 32 000</span>
+            <span class="text-base sm:text-lg text-[#9599a0]">грн</span>
+          </div>
+          <button class="border border-[#e12d2d] rounded-lg pl-5 pr-6 py-3 flex items-center gap-2 text-base sm:text-lg font-medium text-[#e12d2d] hover:bg-red-50 transition-all"><img class="jc-icon" src="assets/icons/trash.svg" alt="" /> Вилучити</button>
+        </div>
+      </article>
+    </section>
 
+    <section class="flex flex-col gap-2">
+      <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Saved</p>
+      <article class="bg-white rounded-2xl shadow-[2px_2px_18px_rgba(24,20,19,0.12)] p-4 sm:p-8 flex flex-col gap-4 w-full">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-4">
+          <h2 class="text-xl sm:text-2xl font-semibold text-[#0f1828]">Менеджер з продажу Call tracking (B2B)</h2>
+          <span class="jc-display-font font-medium text-sm sm:text-lg text-[#3c4451] whitespace-nowrap">15 годин тому</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-x-8 gap-y-2">
+          <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/briefcase.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Akvarel</span></div>
+          <div class="flex items-center gap-2"><img class="jc-icon" src="assets/icons/map-pin.svg" alt="" /><span class="font-medium text-base sm:text-lg text-[#0f1828]">Львів</span></div>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="bg-[#eafbee] text-[#1a8234] rounded-full px-3 h-7 sm:h-8 flex items-center gap-1 text-sm sm:text-base font-medium"><img class="jc-icon-xs" src="assets/icons/check.svg" alt="" /> Наявність пандуса</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">З генератором</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">Психологічна підтримка</span>
+          <span class="bg-[#f5f5f6] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">З укриттям</span>
+          <span class="border border-[#ebeced] rounded-full px-3 h-7 sm:h-8 flex items-center text-sm sm:text-base font-medium text-[#0f1828]">+5</span>
+        </div>
+        <hr class="border-[#ebeced]" />
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-baseline gap-2">
+            <span class="text-xl sm:text-2xl text-[#0f1828]">24 000 - 32 000</span>
+            <span class="jc-display-font font-medium text-xl sm:text-2xl text-[#676d77]">грн</span>
+          </div>
+          <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-end">
+            <button class="border border-[#0f1828] rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-[#0f1828] hover:bg-gray-900 hover:text-white transition-all">Детальніше</button>
+            <button class="rounded-lg px-6 py-3 text-base sm:text-lg font-medium text-white bg-[#c94b2c] hover:opacity-90 transition-all">Відгукнутись</button>
+            <button class="border border-[#e12d2d] rounded-lg pl-5 pr-6 py-3 flex items-center gap-2 text-base sm:text-lg font-medium text-[#e12d2d] hover:bg-red-50 transition-all"><img class="jc-icon" src="assets/icons/trash.svg" alt="" /> Вилучити</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+  </div>
 </div>
 
 </body>
