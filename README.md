@@ -1,6 +1,6 @@
 # Job Card · Tailwind
 
-Верстка Figma-секції (картка вакансії) у HTML + Tailwind CSS, домашнє завдання з Лекції 3.
+Верстка Figma-секції (картка вакансії) у HTML + Tailwind CSS.
 
 Оригінал: Figma-фрейм "Job card" (`761:17614`) з проєкту ATJ Audit.
 
