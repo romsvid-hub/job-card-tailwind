@@ -14,4 +14,4 @@ Suggestion, Unlogged, Unlogged (expanded), Unavailable, Saved. Кожен ста
 напряму з Figma-специфікацією кожного варіанту.
 
 - Live preview (GitHub Pages): https://romsvid-hub.github.io/job-card-tailwind/
-- Live preview (Tailwind Play): https://play.tailwindcss.com/G3KfzqOHmz
+- Live preview (Tailwind Play): https://play.tailwindcss.com/AjHKZBs5il
